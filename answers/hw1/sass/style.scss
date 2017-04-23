@@ -20,18 +20,26 @@ img {
   grid-gap: 30px;
   li {
     width: 300px;
-    overflow: hidden;
+    transition: box-shadow 0.3s, background 0.3s;
+  }
+  li:hover {
+    box-shadow: 0 0 15px 3px rgba(0,0,0,0.7);
+    transition: box-shadow 0.3s, background 0.3s;
+    background: rgba(255,255,255,0.2);
+    .screenshot img {
+      filter: brightness(1.5);
+      transition: filter 0.3s;
+    }
   }
   a {
     text-decoration: none;
     color: #ddd;
-    &:hover {
-      color: #5db7f6;
-      text-decoration: underline;
-    }
   }
   img {
     display: block;
+  }
+  .screenshot img {
+    transition: filter 0.3s;
   }
   .info {
     background: rgba(0,0,0,0.5);

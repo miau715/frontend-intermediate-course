@@ -25,30 +25,40 @@ img {
 /* line 21, ../sass/style.scss */
 .list li {
   width: 300px;
-  overflow: hidden;
+  transition: box-shadow 0.3s, background 0.3s;
 }
 /* line 25, ../sass/style.scss */
+.list li:hover {
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.7);
+  transition: box-shadow 0.3s, background 0.3s;
+  background: rgba(255, 255, 255, 0.2);
+}
+/* line 29, ../sass/style.scss */
+.list li:hover .screenshot img {
+  filter: brightness(1.5);
+  transition: filter 0.3s;
+}
+/* line 34, ../sass/style.scss */
 .list a {
   text-decoration: none;
   color: #ddd;
 }
-/* line 28, ../sass/style.scss */
-.list a:hover {
-  color: #5db7f6;
-  text-decoration: underline;
-}
-/* line 33, ../sass/style.scss */
+/* line 38, ../sass/style.scss */
 .list img {
   display: block;
 }
-/* line 36, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
+.list .screenshot img {
+  transition: filter 0.3s;
+}
+/* line 44, ../sass/style.scss */
 .list .info {
   background: rgba(0, 0, 0, 0.5);
   height: 50px;
   position: relative;
   padding: 10px 10px 10px 70px;
 }
-/* line 42, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 .list .avatar {
   width: 50px;
   height: 50px;
@@ -58,7 +68,7 @@ img {
   top: 10px;
   left: 10px;
 }
-/* line 51, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 .list h2 {
   font-size: 16px;
   line-height: 1.2;
@@ -67,7 +77,7 @@ img {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-/* line 59, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 .list h3 {
   font-size: 15px;
   line-height: 1.2;
