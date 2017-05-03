@@ -1,0 +1,74 @@
+body {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("http://cdn.leagueoflegends.com/lolkit/1.1.6/resources/images/bg-default.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+img {
+  max-width: 100%;
+}
+
+.list {
+  list-style: none;
+  width: 960px;
+  margin: 120px auto;
+  padding: 0;
+  color: #ccc;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-columns: 300px;
+  grid-gap: 30px;
+  li {
+    width: 300px;
+    transition: box-shadow 0.3s, background 0.3s;
+  }
+  li:hover {
+    box-shadow: 0 0 15px 3px rgba(0,0,0,0.7);
+    background: rgba(255,255,255,0.2);
+    transition: box-shadow 0.3s, background 0.3s;
+    .screenshot img {
+      filter: brightness(1.3);
+      transition: filter 0.3s;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #ddd;
+  }
+  img {
+    display: block;
+  }
+  .screenshot img {
+    transition: filter 0.3s;
+  }
+  .info {
+    background: rgba(0,0,0,0.5);
+    height: 50px;
+    position: relative;
+    padding: 10px 10px 10px 70px;
+  }
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  h2 {
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 3px 0 7px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  h3 {
+    font-size: 15px;
+    line-height: 1.2;
+    margin: 0;
+    font-weight: normal;
+  }
+}
+
