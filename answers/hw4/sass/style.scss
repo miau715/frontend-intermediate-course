@@ -4,6 +4,36 @@ body {
   background-attachment: fixed;
 }
 
+body.loading {
+  &:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: rgba(255,255,255,0.3) 10px solid;
+    border-left: transparent 10px solid;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    margin: -30px 0 0 -30px;
+    animation: loading 1s infinite linear;
+  }
+  .list {
+    display: none;
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 img {
   max-width: 100%;
 }
