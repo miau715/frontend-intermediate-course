@@ -2,3 +2,4 @@ examples/
 .sass-cache
 fire_app_log.txt
 .DS_Store
+node_modules/
